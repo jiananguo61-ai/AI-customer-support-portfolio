@@ -140,4 +140,3 @@ npx promptfoo@latest eval -c promptfooconfig.yaml --no-cache
 | [Promptfoo](https://github.com/promptfoo/promptfoo) | 离线回归与红队测试参考 | MIT | 提供兼容配置，主指标由本地脚本复现 |
 
 更完整的来源和许可证核对见 [NOTICE](NOTICE.md)。
-
