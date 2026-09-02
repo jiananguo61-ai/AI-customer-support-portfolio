@@ -145,12 +145,17 @@ def main() -> None:
             "verified": [
                 "Agent configuration and two published revisions exist",
                 "Knowledge retrieval steps completed and returned context items",
-                "No tool-call or ticket row existed at export time",
+                (
+                    "One synthetic manual ticket exists for portfolio evidence"
+                    if counts["t_ticket"] == 1
+                    else f'{counts["t_ticket"]} ticket rows exist at export time'
+                ),
+                f'{counts["t_agent_tool_call"]} Agent Desk tool-call rows exist at export time',
             ],
             "not_claimed": [
                 "Live Gemini completion success",
                 "Live tool execution success",
-                "Live ticket creation success",
+                "AI-created ticket success",
             ],
         },
     }
@@ -162,4 +167,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

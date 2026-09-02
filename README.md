@@ -78,9 +78,20 @@ V2 仍保留 2 条失败用例，分别是“定做”同义词漏识别和带�
 - 7 次 Agent 运行和 15 个运行步骤；
 - 多次 RAG 步骤命中 2 条上下文；
 - 当时 7 次模型调用均失败，原因分类为函数名校验、Gemini 503 高负载和超时；
-- 当时数据库中还没有工具调用记录或工单记录。
+- 数据库中仍没有 Agent 工具调用记录；2026-09-02 通过管理后台创建了 1 张明确标注“虚构数据”的手动演示工单。
 
 因此，本仓库将“Agent Desk 线上原型证据”和“本地确定性评测结果”分开陈述。详见 [Agent Desk 现场证据](docs/agent-desk-live-evidence.md) 与 [脱敏导出](reports/live_agent_desk_evidence.json)。
+
+### 脱敏现场截图
+
+| 现场 | 截图与结论 |
+| --- | --- |
+| Agent 安全边界 | [提示词与欢迎语](assets/screenshots/02-agent-guardrails.png)：知识库优先、信息不足转人工、敏感操作不得虚构执行。 |
+| 知识库索引 | [当前索引状态](assets/screenshots/03-knowledge-index-status.png)：3 个可见策略文档因本地 Ollama embedding 端点不可用而失败；这是阻塞证据，不是成功截图。 |
+| 人工工单 | [匿名演示工单](assets/screenshots/04-human-ticket.png)：虚构数据、无客户、待人工处理。 |
+| 运行审计 | [Agent 审计](assets/screenshots/05-agent-run-audit.png)：7 次运行均失败，知识兜底率 14%，P95 149001 ms。 |
+
+另外保留 [后台总览](assets/screenshots/01-agent-desk-dashboard.png)。所有截图均经过密钥与真实客户信息复核。
 
 ## 快速复现
 
@@ -125,7 +136,7 @@ npx promptfoo@latest eval -c promptfooconfig.yaml --no-cache
 - 仓库不包含 API Key、密码、登录 Token 或真实客户信息。
 - `config/agent-desk-export.sanitized.json` 只保留模型名和非敏感配置。
 - 模拟工具不会修改真实订单、账户或地址。
-- 截图发布前执行人工复核，确保没有密钥和真实客户数据。
+- 已对截图执行人工复核，未发现密钥或真实客户数据。
 
 ## 开源参考与边界
 

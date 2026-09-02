@@ -8,7 +8,15 @@
 - 知识库：`电商售后知识库`，4 份文档；
 - 运行记录：7 次 Agent Run、15 个 Step；
 - RAG：退货问题多次返回 `retrieved context items: 2`；
-- 工具/工单：导出时均为 0 条。
+- 工具：仍为 0 条；
+- 工单：2026-09-02 通过管理后台创建 1 张匿名手动演示工单，标题明确标注“虚构数据”，不声称由 Agent 自动创建。
+
+## 现场截图
+
+- `assets/screenshots/02-agent-guardrails.png`：已发布 Agent 的提示词与安全边界；
+- `assets/screenshots/03-knowledge-index-status.png`：3 个可见文档的当前索引失败状态；
+- `assets/screenshots/04-human-ticket.png`：匿名手动演示工单；
+- `assets/screenshots/05-agent-run-audit.png`：7 次历史失败运行与观测指标。
 
 ## 历史失败分类
 
@@ -23,6 +31,6 @@
 ## 证据边界
 
 - 可证明：Agent 和知识库已配置；RAG 检索步骤实际执行并命中。
-- 暂不可证明：Gemini 在线回复成功、Agent Desk 内真实工具调用成功、真实工单创建成功。
+- 可证明：管理后台的手动建单链路成功；该工单使用虚构数据。
+- 暂不可证明：Gemini 在线回复成功、Agent Desk 内真实工具调用成功、Agent 自动转人工/自动建单成功。
 - 离线工具与风险指标来自本仓库的确定性 Harness，不能替代上述现场证据。
-
