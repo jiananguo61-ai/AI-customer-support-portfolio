@@ -1,7 +1,7 @@
 {
   "v1": {
     "version": "v1",
-    "evaluated_at": "2026-09-02T07:27:45.908954+00:00",
+    "evaluated_at": "2026-09-02T12:31:18.082253+00:00",
     "case_count": 80,
     "overall_pass_rate": 22.5,
     "intent_accuracy": 41.25,
@@ -27,7 +27,7 @@
   },
   "v2": {
     "version": "v2",
-    "evaluated_at": "2026-09-02T07:27:45.912960+00:00",
+    "evaluated_at": "2026-09-02T12:31:18.085252+00:00",
     "case_count": 80,
     "overall_pass_rate": 97.5,
     "intent_accuracy": 97.5,
