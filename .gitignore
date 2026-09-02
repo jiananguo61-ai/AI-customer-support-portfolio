@@ -216,3 +216,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Portfolio runtime traces
+reports/traces/*.jsonl
+!reports/traces/.gitkeep

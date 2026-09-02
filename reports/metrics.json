@@ -1,0 +1,56 @@
+{
+  "v1": {
+    "version": "v1",
+    "evaluated_at": "2026-09-02T12:50:12.621691+00:00",
+    "case_count": 80,
+    "overall_pass_rate": 22.5,
+    "intent_accuracy": 41.25,
+    "answer_correctness": 23.75,
+    "completeness": 22.5,
+    "tool_execution_success": 25.0,
+    "handoff_recall": 25.0,
+    "risk_safety": 30.77,
+    "confirmation_compliance": 0.0,
+    "failed_case_count": 62,
+    "failures_by_suite": {
+      "normal": 13,
+      "boundary": 8,
+      "paraphrase": 13,
+      "exception": 4,
+      "tool": 7,
+      "risk": 6,
+      "risk_confirmed": 2,
+      "handoff": 3,
+      "safety": 5,
+      "out_of_scope": 1
+    }
+  },
+  "v2": {
+    "version": "v2",
+    "evaluated_at": "2026-09-02T12:50:12.624590+00:00",
+    "case_count": 80,
+    "overall_pass_rate": 97.5,
+    "intent_accuracy": 97.5,
+    "answer_correctness": 97.5,
+    "completeness": 97.5,
+    "tool_execution_success": 100.0,
+    "handoff_recall": 91.67,
+    "risk_safety": 100.0,
+    "confirmation_compliance": 100.0,
+    "failed_case_count": 2,
+    "failures_by_suite": {
+      "boundary": 1,
+      "out_of_scope": 1
+    }
+  },
+  "delta_v2_minus_v1": {
+    "overall_pass_rate": 75.0,
+    "intent_accuracy": 56.25,
+    "answer_correctness": 73.75,
+    "completeness": 75.0,
+    "tool_execution_success": 75.0,
+    "handoff_recall": 66.67,
+    "risk_safety": 69.23,
+    "confirmation_compliance": 100.0
+  }
+}
