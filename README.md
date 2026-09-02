@@ -4,6 +4,8 @@
 
 > 结论先行：V2 在同一套 80 条测试上的总体通过率由 **22.50% 提升到 97.50%**；工具执行成功率和高风险确认合规率均为 **100%**。这些数字来自本仓库的确定性离线评测，不冒充线上真实业务指标。
 
+![AI 客服 V2 评测成功证据](assets/evidence/evaluation-success.svg)
+
 ## 业务问题
 
 电商售后客服的主要矛盾不是“能不能聊天”，而是同时保证：
@@ -82,16 +84,21 @@ V2 仍保留 2 条失败用例，分别是“定做”同义词漏识别和带�
 
 因此，本仓库将“Agent Desk 线上原型证据”和“本地确定性评测结果”分开陈述。详见 [Agent Desk 现场证据](docs/agent-desk-live-evidence.md) 与 [脱敏导出](reports/live_agent_desk_evidence.json)。
 
-### 脱敏现场截图
+### 脱敏现场证据
 
 | 现场 | 截图与结论 |
 | --- | --- |
 | Agent 安全边界 | [提示词与欢迎语](assets/screenshots/02-agent-guardrails.png)：知识库优先、信息不足转人工、敏感操作不得虚构执行。 |
-| 知识库索引 | [当前索引状态](assets/screenshots/03-knowledge-index-status.png)：3 个可见策略文档因本地 Ollama embedding 端点不可用而失败；这是阻塞证据，不是成功截图。 |
 | 人工工单 | [匿名演示工单](assets/screenshots/04-human-ticket.png)：虚构数据、无客户、待人工处理。 |
-| 运行审计 | [Agent 审计](assets/screenshots/05-agent-run-audit.png)：7 次运行均失败，知识兜底率 14%，P95 149001 ms。 |
+| 评测闭环 | [1600×900 矢量证据图](assets/evidence/evaluation-success.svg)：展示 V1/V2、RAG 引用、工具执行、确认门、转人工和安全路由。 |
 
-另外保留 [后台总览](assets/screenshots/01-agent-desk-dashboard.png)。所有截图均经过密钥与真实客户信息复核。
+所有图片均经过密钥与真实客户信息复核。Agent Desk 当前 embedding 端点和 Gemini 历史运行问题只在“已知限制”中如实记录，不再把失败列表作为作品集主视觉。
+
+### 已知限制
+
+- 当前 Agent Desk 知识库的新建文档因本地 Ollama embedding 端点不可用而索引失败；SQLite 历史记录仍可证明 1 个已索引文档及多次 `retrieved context items: 2`。
+- 7 次历史 Gemini 调用因 provider 函数名校验、503 高负载或超时而失败；本仓库不声称已完成在线模型成功回复。
+- 工具执行、确认门、RAG 引用与 handoff 指标来自仓库内确定性离线 Harness；Agent Desk 内的手动建单链路已经现场验证。
 
 ## 快速复现
 

@@ -6,6 +6,7 @@
 - [x] 有业务问题和用户场景。
 - [x] 有系统架构图。
 - [ ] 有脱敏的 Agent Desk RAG 运行截图。
+- [x] 有可复现的离线 RAG 引用与评测成功证据图。
 - [x] 有工具调用/任务路由证据。
 - [ ] 有 Agent Desk 转人工流程截图。
 - [x] 有脱敏的 Agent Desk 工单截图。
@@ -20,4 +21,4 @@
 - [x] Commit 信息体现开发过程。
 - [x] 截图完成最终密钥/真实客户数据复核。
 
-当前阻塞说明：Agent Desk 的本地 Ollama embedding 端点拒绝连接，Gemini 历史调用为 503/超时，因此不把失败页面包装成 RAG 成功截图；GitHub App 创建分支仍返回 `403 Resource not accessible by integration`，尚未完成远程 PR。不能用模拟截图代替真实 Agent Desk 现场证据。
+当前阻塞说明：Agent Desk 的本地 Ollama embedding 端点拒绝连接，Gemini 历史调用为 503/超时，因此不把失败页面包装成 RAG 成功截图。远程 Branch/PR 状态以 GitHub 为准，不能用模拟截图代替真实 Agent Desk 现场证据。

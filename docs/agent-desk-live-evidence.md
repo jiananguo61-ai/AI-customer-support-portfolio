@@ -14,9 +14,8 @@
 ## 现场截图
 
 - `assets/screenshots/02-agent-guardrails.png`：已发布 Agent 的提示词与安全边界；
-- `assets/screenshots/03-knowledge-index-status.png`：3 个可见文档的当前索引失败状态；
 - `assets/screenshots/04-human-ticket.png`：匿名手动演示工单；
-- `assets/screenshots/05-agent-run-audit.png`：7 次历史失败运行与观测指标。
+- `assets/evidence/evaluation-success.svg`：1600×900 的离线评测成功证据图，数据来自仓库内报告。
 
 ## 历史失败分类
 
