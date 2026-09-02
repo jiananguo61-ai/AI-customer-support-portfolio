@@ -1,0 +1,34 @@
+{
+  "exported_at": "2026-09-02",
+  "source": "local Agent Desk SQLite; manually sanitized",
+  "agent": {
+    "name": "电商售后客服",
+    "status": "published",
+    "max_steps": 6,
+    "service_mode": "AI-first with fallback",
+    "handoff_mode": "enabled",
+    "fallback_mode": "knowledge-insufficient handoff",
+    "knowledge_base": "电商售后知识库",
+    "published_revision": 2
+  },
+  "models": [
+    {
+      "role": "chat",
+      "provider_protocol": "OpenAI-compatible",
+      "model": "gemini-3.7-flash",
+      "api_key": "[REDACTED]"
+    },
+    {
+      "role": "embedding",
+      "provider_protocol": "OpenAI-compatible",
+      "model": "gemini-embedding-001",
+      "dimension": 3072,
+      "api_key": "[REDACTED]"
+    }
+  ],
+  "privacy": {
+    "contains_real_customer_data": false,
+    "contains_api_keys": false
+  }
+}
+
