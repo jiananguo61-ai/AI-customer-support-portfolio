@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+.env
+.venv/
+reports/traces/*.jsonl
+!reports/traces/.gitkeep
+
