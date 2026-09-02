@@ -1,0 +1,167 @@
+{
+  "exported_at": "2026-09-02T07:33:20.960612+00:00",
+  "source": "local Agent Desk SQLite read-only export",
+  "privacy": {
+    "api_key_values_exported": false,
+    "login_tokens_exported": false,
+    "customer_contact_fields_exported": false
+  },
+  "counts": {
+    "t_ai_agent": 1,
+    "t_agent_revision": 2,
+    "t_knowledge_base": 1,
+    "t_knowledge_document": 4,
+    "t_agent_run": 7,
+    "t_agent_step": 15,
+    "t_agent_tool_call": 0,
+    "t_ticket": 0
+  },
+  "agent": {
+    "name": "电商售后客服",
+    "status": 0,
+    "max_steps": 6,
+    "service_mode": 3,
+    "handoff_mode": 1,
+    "fallback_mode": 3,
+    "published_revision_id": 2
+  },
+  "model_configs": [
+    {
+      "name": "Gemini客服对话模型",
+      "provider": "openai",
+      "base_url": "https://generativelanguage.googleapis.com/v1beta/openai/",
+      "model_type": "llm",
+      "model_name": "gemini-3.7-flash",
+      "dimension": 0,
+      "api_key_configured": true,
+      "status": 1
+    },
+    {
+      "name": "Gemini 知识库模型",
+      "provider": "openai",
+      "base_url": "https://generativelanguage.googleapis.com/v1beta/openai/",
+      "model_type": "embedding",
+      "model_name": "gemini-embedding-001",
+      "dimension": 3072,
+      "api_key_configured": true,
+      "status": 1
+    },
+    {
+      "name": "qwen3:4b客服自动回复模型",
+      "provider": "openai",
+      "base_url": "http://host.docker.internal:11434/v1",
+      "model_type": "llm",
+      "model_name": "qwen3:4b",
+      "dimension": 0,
+      "api_key_configured": true,
+      "status": 0
+    },
+    {
+      "name": "qwen3:4b知识库模型",
+      "provider": "openai",
+      "base_url": "http://host.docker.internal:11434/v1",
+      "model_type": "embedding",
+      "model_name": "qwen3-embedding:0.6b",
+      "dimension": 1024,
+      "api_key_configured": true,
+      "status": 0
+    }
+  ],
+  "knowledge_documents": [
+    {
+      "title": "delivery-policy.md",
+      "status": 2,
+      "index_status": "indexed",
+      "has_index_error": 0
+    },
+    {
+      "title": "delivery-policy",
+      "status": 0,
+      "index_status": "failed",
+      "has_index_error": 1
+    },
+    {
+      "title": "refund-policy",
+      "status": 0,
+      "index_status": "failed",
+      "has_index_error": 1
+    },
+    {
+      "title": "return-policy",
+      "status": 0,
+      "index_status": "failed",
+      "has_index_error": 1
+    }
+  ],
+  "run_status": {
+    "failed": 7
+  },
+  "knowledge_retrieval_steps": [
+    {
+      "step_id": 2,
+      "status": "completed",
+      "input_preview": "商品签收之后几天内可以退？",
+      "output_preview": "retrieved context items: 2",
+      "duration_ms": 2510
+    },
+    {
+      "step_id": 4,
+      "status": "completed",
+      "input_preview": "你好",
+      "output_preview": "retrieved context items: 0",
+      "duration_ms": 2523
+    },
+    {
+      "step_id": 7,
+      "status": "completed",
+      "input_preview": "测试自动回复：商品签收后几天内可以退货？",
+      "output_preview": "retrieved context items: 2",
+      "duration_ms": 5213
+    },
+    {
+      "step_id": 9,
+      "status": "completed",
+      "input_preview": "重试测试：商品签收后几天内可以退货？",
+      "output_preview": "retrieved context items: 2",
+      "duration_ms": 4182
+    },
+    {
+      "step_id": 11,
+      "status": "completed",
+      "input_preview": "模型切换验证：商品签收后几天内可以退货？",
+      "output_preview": "retrieved context items: 2",
+      "duration_ms": 3141
+    },
+    {
+      "step_id": 13,
+      "status": "completed",
+      "input_preview": "最终验证：商品签收后几天内可以退货？",
+      "output_preview": "retrieved context items: 2",
+      "duration_ms": 3280
+    },
+    {
+      "step_id": 15,
+      "status": "completed",
+      "input_preview": "今日验证：商品签收后几天内可以退货？",
+      "output_preview": "retrieved context items: 2",
+      "duration_ms": 149008
+    }
+  ],
+  "model_error_categories": {
+    "provider_function_name_validation": 2,
+    "provider_capacity_503": 4,
+    "provider_timeout": 1
+  },
+  "interpretation": {
+    "verified": [
+      "Agent configuration and two published revisions exist",
+      "Knowledge retrieval steps completed and returned context items",
+      "No tool-call or ticket row existed at export time"
+    ],
+    "not_claimed": [
+      "Live Gemini completion success",
+      "Live tool execution success",
+      "Live ticket creation success"
+    ]
+  }
+}
