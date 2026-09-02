@@ -17,7 +17,7 @@
 - [x] 有第二轮复测。
 - [x] 有迭代前后指标对比。
 - [x] 有清晰的开源项目引用与许可证说明。
-- [ ] 至少使用一个 Branch 和一个远程 PR。
+- [x] 至少使用一个 Branch 和一个远程 PR（`feature/evaluation-closure` → `main`，PR #1）。
 - [x] Commit 信息体现开发过程。
 - [x] 截图完成最终密钥/真实客户数据复核。
 
